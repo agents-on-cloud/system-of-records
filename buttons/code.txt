@@ -1,0 +1,15 @@
+/// Html file 
+
+<v-btn color="" v-bind="attrs" v-on="on" class="btn-create">
+   Create New Item
+</v-btn>
+
+
+/// css file
+
+.btn-create {
+  background-color: #0392ce !important;
+  color: #fff !important;
+  padding: 5px 20px;
+  border-radius: 3px;
+}
