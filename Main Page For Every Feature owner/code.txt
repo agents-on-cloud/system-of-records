@@ -1,0 +1,81 @@
+/// Html 
+
+ <v-container>
+    <div class="Main-title">
+      <h1>Inventory Management</h1>
+    </div>
+    <div class="Main-pages">
+      <div>
+        <h3>Items</h3>
+        <button type="button" @click="itemPage" class="btn-item"> View All</button>
+      </div>
+      <div>
+            <h3>Suppliers</h3>
+        <button @click='supplerPage' type="button" class="btn-Suppliers"> View All</button>
+      </div>
+      <div>
+            <h3>Stocks</h3>
+        <button @click="stockPage" type="button" class="btn-Stocks"> View All</button>
+      </div>
+    </div>
+  </v-container>
+
+
+
+
+//// CSS File
+
+
+.Main-pages{
+  display: flex;
+  justify-content:space-around;
+  align-items:center;
+  margin-top:50px;
+}
+.Main-pages div{
+  border-radius: 5px;
+  text-align: center;
+  color: #FFFF;
+  width: 100%;
+  height: 300px;
+}
+.Main-pages div:nth-child(2){
+  background-color: #0392CE;
+}
+.Main-pages .btn-item{
+  background-color: #0392CE;
+}
+.Main-pages div:nth-child(1){
+  background-color: #3EB8D7;
+}
+.Main-pages .btn-Suppliers{
+  background-color:#3065B5;
+}
+.Main-pages div:nth-child(3){
+  background-color: #3065B5;
+}
+.Main-pages .btn-Stocks{
+  background-color: #0392CE;
+}
+.Main-pages div h3{
+  text-transform: uppercase;
+  font-size: 30px;
+}
+.Main-pages div button{
+  transition: 2.e
+}
+.Main-pages div button , .Main-pages div h3{
+  margin-top:50px;
+}
+.Main-pages div button{
+  padding:10px 20px;
+}
+button {
+  position: relative;
+  background-color: transparent;
+  padding: 10px 20px;
+  color: #ffffff;
+  border: none;
+  transform: none;
+  cursor: pointer;
+}
