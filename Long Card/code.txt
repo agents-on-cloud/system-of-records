@@ -1,0 +1,89 @@
+//// Html 
+ <div class="Card-items">
+                      <v-card>
+                        <v-img
+                          v-bind="attrs"
+                          @click="itemdetails(item)"
+                          v-on="on"
+                          class="img"
+                          :src="card.item_img"
+                        ></v-img>
+                        <div class="elipses-card">
+                          <v-card-title class="nameofitem">{{
+                            card.name
+                          }}</v-card-title>
+                          <v-menu bottom left>
+                            <template v-slot:activator="{ on, attrs }">
+                              <v-btn dark icon v-bind="attrs" v-on="on">
+                                <v-icon class="elipses"
+                                  >mdi-dots-vertical</v-icon
+                                >
+                              </v-btn>
+                            </template>
+
+                            <v-list>
+                              <v-list-item>
+                                <v-list-item-title class="elipses-option"
+                                  >Update</v-list-item-title
+                                >
+                              </v-list-item>
+                              <v-list-item>
+                                <v-list-item-title
+                                  class="elipses-option"
+                                  @click="deleteItem(card.item_id)"
+                                >
+                                  Delete</v-list-item-title
+                                >
+                              </v-list-item>
+                            </v-list>
+                          </v-menu>
+                        </div>
+                        <v-card-text class="desc">
+                          <div>
+                            {{ card.item_desc }}
+                          </div>
+                        </v-card-text>
+                      </v-card>
+                  </div>
+
+
+
+//// css script 
+
+.Card-items {
+  box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform var(--main-transition),
+    box-shadow var(--main-transition);
+  min-height: 400px;
+  border: 1px solid #0392ce;
+  max-width: 100%;
+}
+.Card-items:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+}
+.Card-items .img {
+  width: 100%;
+  max-width: 100%;
+  height: 250px;
+  cursor: pointer;
+}
+.nameofitem {
+  color: #3065b5;
+}
+
+.elipses-option {
+  cursor: pointer;
+}
+.elipses {
+  color: #0392ce !important;
+  font-size: 25px !important;
+}
+.elipses-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
