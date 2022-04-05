@@ -1,0 +1,94 @@
+//// HTML 
+
+
+   <div class="main-supplier">
+        <div class="container" v-if="getResult.length">
+          <div v-for="Supplier in getResult" :key="Supplier.id">
+            <div class="Card-items">
+              <v-card :loading="loading" class="ddd" max-width="400">
+                <template slot="progress">
+                  <v-progress-linear
+                    color="deep-purple"
+                    height="10"
+                    indeterminate
+                  ></v-progress-linear>
+                </template>
+
+                <v-img class="img" :src="Supplier.img_supplier"></v-img>
+
+                <div class="elipses-card">
+                  <v-card-title class="nameofitem">{{
+                    Supplier.name
+                  }}</v-card-title>
+                  <v-menu bottom left>
+                    <template v-slot:activator="{ on, attrs }">
+                      <v-btn dark icon v-bind="attrs" v-on="on">
+                        <v-icon class="elipses">mdi-dots-vertical</v-icon>
+                      </v-btn>
+                    </template>
+
+                    <v-list>
+                      <v-list-item>
+                        <v-list-item-title class="elipses-option"
+                          >Update</v-list-item-title
+                        >
+                      </v-list-item>
+                      <v-list-item>
+                        <v-list-item-title class="elipses-option"
+                          >Delete</v-list-item-title
+                        >
+                      </v-list-item>
+                    </v-list>
+                  </v-menu>
+                </div>
+                <p>
+                  <v-icon class="icon">mdi-briefcase</v-icon
+                  >{{ Supplier.companyname }}
+                </p>
+                <p>
+                  <v-icon class="icon">mdi-cellphone</v-icon> +962-{{
+                    Supplier.mobile
+                  }}
+                </p>
+                <p>
+                  <v-icon class="icon">mdi-email</v-icon> {{ Supplier.email }}
+                </p>
+              </v-card>
+            </div>
+          </div>
+        </div>
+        <div v-else class="emptyItems">
+          <p>There's No Supplier Available</p>
+        </div>
+      </div>
+
+
+
+
+///// CSS File 
+
+
+
+.main-supplier .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+.Card-items {
+  box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+  border-radius: 6px;
+  height: auto;
+  overflow: hidden;
+  transition: transform var(--main-transition),
+    box-shadow var(--main-transition);
+  border: 1px solid #0392ce;
+}
+.Card-items:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+}
+.Card-items .img {
+  width: 100%;
+  max-width: 100%;
+  height: 150px;
+}
