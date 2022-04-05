@@ -1,0 +1,28 @@
+//// Html script 
+   <div class="letters">
+        <p
+          v-for="start in 90"
+          v-if="start >= 65"
+          @click="getItemByletters(start)"
+        >
+          {{ String.fromCharCode(start) }}
+        </p>
+      </div>
+
+
+//// css script 
+
+.letters {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.letters p {
+  margin: 0px 5px;
+  background-color: #0392ce;
+  color: #fff;
+  padding: 7px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 18px;
+}
