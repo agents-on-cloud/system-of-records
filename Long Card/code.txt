@@ -58,7 +58,7 @@
   transition: transform var(--main-transition),
     box-shadow var(--main-transition);
   min-height: 400px;
-  border: 1px solid #0392ce;
+  border: 1px solid #009688
   max-width: 100%;
 }
 .Card-items:hover {

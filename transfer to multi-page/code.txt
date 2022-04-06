@@ -1,0 +1,27 @@
+/// html file 
+<v-container>
+      <div class="title-of-page">
+        <div>
+          <span class="back" @click="goBack()">HOME /</span
+          ><span> View Stocks</span>
+        </div>
+        <div>
+        </div>
+  </div>
+  </v-container>
+
+
+///css File 
+
+.title-of-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+.back {
+  color: #009688;
+  cursor: pointer;
+  font-weight: bold;
+}
