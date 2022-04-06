@@ -19,7 +19,7 @@
 }
 .letters p {
   margin: 0px 5px;
-  background-color: #0392ce;
+  background-color: #009688
   color: #fff;
   padding: 7px;
   cursor: pointer;
