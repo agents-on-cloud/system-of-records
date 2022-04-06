@@ -1,0 +1,219 @@
+//// HTML FILE
+
+<template>
+  <v-container>
+    <v-toolbar dark color="teal" elevation="20" class='main'>
+      <v-row>
+        <v-col>
+            <v-autocomplete
+            cols='12' md='2'
+        v-model="select"
+        :loading="loading"
+        :items="items"
+        :search-input.sync="search"
+        cache-items
+        class="filterSearch"
+        flat
+        hide-no-data
+        hide-details
+        label="Choose your item"
+        solo-inverted
+      >
+      </v-autocomplete>
+        </v-col>
+          <v-col>
+            <v-autocomplete
+            cols='12' md='2'
+        v-model="select"
+        :loading="loading"
+        :items="items"
+        :search-input.sync="search"
+        cache-items
+        class="filterSearch"
+        flat
+        hide-no-data
+        hide-details
+        label="Choose your item"
+        solo-inverted
+      >
+      </v-autocomplete>
+        </v-col>
+          <v-col>
+            <v-autocomplete
+            cols='12' md='2'
+        v-model="select"
+        :loading="loading"
+        :items="items"
+        :search-input.sync="search"
+        cache-items
+        class="filterSearch"
+        flat
+        hide-no-data
+        hide-details
+        label="Choose your item"
+        solo-inverted
+      >
+      </v-autocomplete>
+        </v-col>
+        <v-col cols='12' md='1'>
+           <v-btn class="ma-2 toggle" color="dark" @click="expand = !expand">
+        <v-icon v-if="expand == false"> mdi-arrow-down-thick </v-icon>
+        <v-icon v-else> mdi-arrow-up-thick </v-icon>
+      </v-btn>
+        </v-col>
+        <v-col cols='12' md='1'>
+
+      <v-btn class="btn888" @click="submitForm">Show Results</v-btn>
+        </v-col>
+        <v-col cols='12' md='1'>
+
+      <v-btn @click="resetHandler" class="resetBtn">Reset</v-btn>
+        </v-col>
+      </v-row>
+
+    </v-toolbar>
+    <v-expand-transition>
+      <v-card
+        v-show="expand"
+        height="100"
+        width="70vw"
+        class="mx-autoo"
+      >
+      <v-row>
+        <v-col>
+            <div class="secondLevel">
+          <v-select
+            v-model="facilitiesValue"
+            :items="facilitiesItems"
+            chips
+            label="Choose your item"
+            multiple
+            solo
+            light
+            class="secondLevelSelect"
+          >
+            <template v-slot:selection="{ item, index }">
+              <v-chip v-if="index === 0">
+                <span>{{ item }}</span>
+              </v-chip>
+              <span v-if="index === 1" class="grey--text text-caption">
+                (+{{ facilitiesValue.length - 1 }} others)
+              </span>
+            </template>
+          </v-select>
+        </div>
+        </v-col>
+        <v-col>
+            <div class="secondLevel">
+          <v-select
+            v-model="facilitiesValue"
+            :items="facilitiesItems"
+            chips
+            label="Choose your item"
+            multiple
+            solo
+            light
+            class="secondLevelSelect"
+          >
+            <template v-slot:selection="{ item, index }">
+              <v-chip v-if="index === 0">
+                <span>{{ item }}</span>
+              </v-chip>
+              <span v-if="index === 1" class="grey--text text-caption">
+                (+{{ facilitiesValue.length - 1 }} others)
+              </span>
+            </template>
+          </v-select>
+        </div>
+        </v-col>
+        <v-col>
+            <div class="secondLevel">
+          <v-select
+            v-model="facilitiesValue"
+            :items="facilitiesItems"
+            chips
+            label="Choose your item"
+            multiple
+            solo
+            light
+            class="secondLevelSelect"
+          >
+            <template v-slot:selection="{ item, index }">
+              <v-chip v-if="index === 0">
+                <span>{{ item }}</span>
+              </v-chip>
+              <span v-if="index === 1" class="grey--text text-caption">
+                (+{{ facilitiesValue.length - 1 }} others)
+              </span>
+            </template>
+          </v-select>
+        </div>
+        </v-col>
+         <v-col>
+            <div class="secondLevel">
+          <v-select
+            v-model="facilitiesValue"
+            :items="facilitiesItems"
+            chips
+            label="Choose your item"
+            multiple
+            solo
+            light
+            class="secondLevelSelect"
+          >
+            <template v-slot:selection="{ item, index }">
+              <v-chip v-if="index === 0">
+                <span>{{ item }}</span>
+              </v-chip>
+              <span v-if="index === 1" class="grey--text text-caption">
+                (+{{ facilitiesValue.length - 1 }} others)
+              </span>
+            </template>
+          </v-select>
+        </div>
+        </v-col>
+      </v-row>
+      </v-card>
+    </v-expand-transition>
+  </v-container>
+</template>
+
+
+
+/// vue script
+<script>
+export default {
+  data() {
+    return {
+      expand: false,
+    };
+  },
+};
+</script>
+
+
+
+
+//// CSS File
+<style lang="scss" scoped>
+.main{
+  padding:16px;
+  height: 100px !important;
+}
+.mx-autoo {
+  background: rgba(24, 88, 29, 0.342);
+  padding:16px;
+  height: 100px !important;
+}
+.btn888 {
+  margin-left:-15px ;
+}
+.resetBtn{
+  margin-left: 25px;
+}
+
+.resetBtn , .btn888{
+   padding:23px !important;
+}
+
+</style>
