@@ -1,0 +1,48 @@
+//// HTML FILE
+
+<template>
+  <v-card class="card" max-width="600" height="200">
+    <v-row>
+      <v-col md='10'>
+        <h3>xxxxxx Added successfully</h3>
+        <br>
+        <p>a new XXX <br>
+        (xxxxx name) has been added successfully</p>
+         </v-col >
+      <v-col md='2'>
+        <v-icon class='icon'>mdi-checkbox-marked-circle</v-icon>
+         </v-col>
+    </v-row>
+      <v-row>
+      <v-col md='10'>
+         </v-col >
+      <v-col md='2' class='btn-ok'> OK </v-col>
+    </v-row>
+  </v-card>
+</template>
+
+
+
+/// CSS File 
+
+
+.card {
+  font-family:cursive;
+  margin-left: 50px;
+  margin-top: 50px;
+  box-shadow: 0px 10px 24px 5px rgb(0 0 0 / 10%), 0px 3px 4px 1px rgb(0 0 0 / 14%), 14px 30px 35px 20px rgb(0 0 0 / 12%) !important;
+    padding:20px;
+    border-radius: 0;
+}
+p{
+  color:  rgb(0 0 0 / 55%)
+}
+.btn-ok{
+  color: #22619E;
+}
+.icon{
+  color: green;
+  font-size: 55px;
+  margin-top: 30px;
+  margin-left: -15px;
+}

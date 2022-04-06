@@ -1,0 +1,71 @@
+//// HTML file
+
+<template>
+  <v-card class="card" max-width="600" height="220">
+    <v-row>
+      <v-col md='10'>
+        <h3> Delete xxxxxx  </h3>
+        <br>
+        <p>You are sure you want to delete<br>
+        XXXXXX,  (XXXXXX name )?
+        </p>
+         </v-col >
+      <v-col md='2'>
+        <v-icon class='icon'>mdi-delete</v-icon>
+         </v-col>
+    </v-row>
+      <v-row>
+      <v-col md='10'>
+         </v-col >
+      <v-col md='2' class='btn-ok'>
+     <div class='btn-option'>
+          <btn class="btn-update"> delete</btn>
+        <btn> cancel</btn>
+     </div>
+         </v-col>
+    </v-row>
+  </v-card>
+</template>
+
+
+
+
+
+//// CSS FILE
+<style scoped>
+.card {
+  font-family:cursive;
+  margin-left: 50px;
+  margin-top: 50px;
+  box-shadow: 0px 10px 24px 5px rgb(0 0 0 / 10%), 0px 3px 4px 1px rgb(0 0 0 / 14%), 14px 30px 35px 20px rgb(0 0 0 / 12%) !important;
+    padding:20px;
+    border-radius: 0;
+}
+.card p{
+  color:  rgb(0 0 0 / 55%)
+}
+.btn-ok{
+  color: #22619E;
+}
+.btn-option{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: -50px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.btn-option btn{
+  margin-left: -25px;
+}
+.icon{
+  color: red;
+  font-size: 55px;
+  margin-top: 30px;
+  margin-left: -15px;
+}
+.card span{
+  font-weight: bold;
+}
+
+</style>
