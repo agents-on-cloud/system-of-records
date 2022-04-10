@@ -51,14 +51,14 @@
 //// css script 
 
 .Card-items {
+  padding: 10px;
   box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
   background-color: white;
-  border-radius: 6px;
+  border-radius: 10px;
   overflow: hidden;
-  transition: transform var(--main-transition),
-    box-shadow var(--main-transition);
+  transition: transform var(--main-transition);
   min-height: 400px;
-  border: 1px solid #009688
+  border: 1px solid #009688;
   max-width: 100%;
 }
 .Card-items:hover {
@@ -67,6 +67,7 @@
 }
 .Card-items .img {
   width: 100%;
+  border-radius: 6px;
   max-width: 100%;
   height: 250px;
   cursor: pointer;
