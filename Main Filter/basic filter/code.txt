@@ -1,8 +1,7 @@
-//// HTML File
 
 <template>
   <v-container>
-    <v-toolbar dark color="teal" elevation="20" class="main">
+    <v-toolbar elevation="20" class="main" shaped>
       <v-row>
         <v-col>
           <v-autocomplete
@@ -17,7 +16,7 @@
             flat
             hide-no-data
             hide-details
-            label="Choose your item"
+            placeholder="Choose your item"
             solo-inverted
           >
           </v-autocomplete>
@@ -35,7 +34,7 @@
             flat
             hide-no-data
             hide-details
-            label="Choose your item"
+            placeholder="Choose your item"
             solo-inverted
           >
           </v-autocomplete>
@@ -53,16 +52,34 @@
             flat
             hide-no-data
             hide-details
-            label="Choose your item"
+            placeholder="Choose your item"
+            solo-inverted
+          >
+          </v-autocomplete>
+        </v-col>
+          <v-col>
+          <v-autocomplete
+            cols="12"
+            md="3"
+            v-model="select"
+            :loading="loading"
+            :items="items"
+            :search-input.sync="search"
+            cache-items
+            class="filterSearch"
+            flat
+            hide-no-data
+            hide-details
+            placeholder="Choose your item"
             solo-inverted
           >
           </v-autocomplete>
         </v-col>
         <v-col cols="12" md="1">
-          <v-btn class="btn888">Show Results</v-btn>
+          <v-btn class="btn-result">Results</v-btn>
         </v-col>
         <v-col cols="12" md="1">
-          <v-btn class="resetBtn">Claer</v-btn>
+          <v-btn class="btn-reset">Claer</v-btn>
         </v-col>
       </v-row>
     </v-toolbar>
@@ -71,27 +88,34 @@
 
 
 
-//// CSS FILE 
 <script>
-export default {
-  data() {
-    return {
-    };
-  },
-};
+  export default {
+    data(){
+      return{
+        items: ["Admin" , "Admin" , "Admin" , "Admin" , "Admin" , "Admin"]
+      }
+    }
+  }
 </script>
-<style lang="scss" scoped>
+
+<style scoped>
+
 .main{
   padding:16px;
   height: 100px !important;
+  background-color: #009688 !important;
 }
-.resetBtn {
-  margin-left: 25px;
+.main .filterSearch{
+  background-color: #FFF;
 }
-.btn888 , .resetBtn{
+.btn-reset{
+  color: #009688 !important;
+}
+.btn-result{
+  background-color: #000 !important;
+  color: #FFF !important;
+}
+.btn-result , .btn-reset{
   padding:23px !important;
 }
-/* .secondLevelItems{
-  display:inline-block;
-} */
 </style>
