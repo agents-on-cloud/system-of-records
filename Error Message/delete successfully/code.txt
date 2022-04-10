@@ -1,4 +1,4 @@
-//// HTML file
+
 
 <template>
   <v-card class="card" max-width="600" height="220">
@@ -11,16 +11,16 @@
         </p>
          </v-col >
       <v-col md='2'>
-        <v-icon class='icon'>mdi-delete</v-icon>
+        <v-icon class='icon'>mdi-delete-forever</v-icon>
          </v-col>
     </v-row>
       <v-row>
       <v-col md='10'>
          </v-col >
-      <v-col md='2' class='btn-ok'>
+      <v-col md='2' class='btn'>
      <div class='btn-option'>
-          <btn class="btn-update"> delete</btn>
-        <btn> cancel</btn>
+          <btn class="btn-delete"> delete</btn>
+        <btn class="btn-cancel"> cancel</btn>
      </div>
          </v-col>
     </v-row>
@@ -29,12 +29,18 @@
 
 
 
+<script>
+  export default {
 
+  }
+</script>
 
-//// CSS FILE
 <style scoped>
+
+
+
 .card {
-  font-family:cursive;
+  font-family:Roboto;
   margin-left: 50px;
   margin-top: 50px;
   box-shadow: 0px 10px 24px 5px rgb(0 0 0 / 10%), 0px 3px 4px 1px rgb(0 0 0 / 14%), 14px 30px 35px 20px rgb(0 0 0 / 12%) !important;
@@ -44,8 +50,13 @@
 .card p{
   color:  rgb(0 0 0 / 55%)
 }
-.btn-ok{
+.btn-delete{
   color: #22619E;
+  margin-top:-15px;
+}
+.btn-cancel{
+  color: gray;
+   margin-top:-15px;
 }
 .btn-option{
   display:flex;
@@ -67,5 +78,4 @@
 .card span{
   font-weight: bold;
 }
-
 </style>
