@@ -1,4 +1,3 @@
-//// HTML FILE
 
 <template>
   <v-card class="card" max-width="600" height="200">
@@ -23,11 +22,18 @@
 
 
 
-/// CSS File 
+<script>
+  export default {
+
+  }
+</script>
+
+<style scoped>
+
 
 
 .card {
-  font-family:cursive;
+  font-family: Roboto;
   margin-left: 50px;
   margin-top: 50px;
   box-shadow: 0px 10px 24px 5px rgb(0 0 0 / 10%), 0px 3px 4px 1px rgb(0 0 0 / 14%), 14px 30px 35px 20px rgb(0 0 0 / 12%) !important;
@@ -39,6 +45,8 @@ p{
 }
 .btn-ok{
   color: #22619E;
+  margin-top:-15px;
+  cursor: pointer;
 }
 .icon{
   color: green;
@@ -46,3 +54,4 @@ p{
   margin-top: 30px;
   margin-left: -15px;
 }
+</style>
