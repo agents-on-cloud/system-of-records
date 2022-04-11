@@ -1,73 +1,88 @@
-//// HTML FILE
 
 <template>
   <v-container>
-    <v-toolbar dark color="teal" elevation="20" class='main'>
+    <v-toolbar elevation="20" class='main' shaped>
       <v-row>
+        <v-col cols="12" md='2'>
+            <v-autocomplete
+        v-model="select"
+        :loading="loading"
+        :items="items"
+        :search-input.sync="search"
+        cache-items
+        class="filterSearch"
+        flat
+        hide-no-data
+        hide-details
+        label="Choose your item"
+        solo-inverted
+      >
+      </v-autocomplete>
+        </v-col>
+          <v-col cols="12" md='2'>
+            <v-autocomplete
+
+        v-model="select"
+        :loading="loading"
+        :items="items"
+        :search-input.sync="search"
+        cache-items
+        class="filterSearch"
+        flat
+        hide-no-data
+        hide-details
+        label="Choose your item"
+        solo-inverted
+      >
+      </v-autocomplete>
+        </v-col>
+          <v-col cols="12" md='2'>
+            <v-autocomplete
+
+        v-model="select"
+        :loading="loading"
+        :items="items"
+        :search-input.sync="search"
+        cache-items
+        class="filterSearch"
+        flat
+        hide-no-data
+        hide-details
+        label="Choose your item"
+        solo-inverted
+      >
+      </v-autocomplete>
+        </v-col>
+            <v-col cols="12" md='2'>
+            <v-autocomplete
+
+        v-model="select"
+        :loading="loading"
+        :items="items"
+        :search-input.sync="search"
+        cache-items
+        class="filterSearch"
+        flat
+        hide-no-data
+        hide-details
+        label="Choose your item"
+        solo-inverted
+      >
+      </v-autocomplete>
+        </v-col>
         <v-col>
-            <v-autocomplete
-            cols='12' md='2'
-        v-model="select"
-        :loading="loading"
-        :items="items"
-        :search-input.sync="search"
-        cache-items
-        class="filterSearch"
-        flat
-        hide-no-data
-        hide-details
-        label="Choose your item"
-        solo-inverted
-      >
-      </v-autocomplete>
-        </v-col>
-          <v-col>
-            <v-autocomplete
-            cols='12' md='2'
-        v-model="select"
-        :loading="loading"
-        :items="items"
-        :search-input.sync="search"
-        cache-items
-        class="filterSearch"
-        flat
-        hide-no-data
-        hide-details
-        label="Choose your item"
-        solo-inverted
-      >
-      </v-autocomplete>
-        </v-col>
-          <v-col>
-            <v-autocomplete
-            cols='12' md='2'
-        v-model="select"
-        :loading="loading"
-        :items="items"
-        :search-input.sync="search"
-        cache-items
-        class="filterSearch"
-        flat
-        hide-no-data
-        hide-details
-        label="Choose your item"
-        solo-inverted
-      >
-      </v-autocomplete>
-        </v-col>
-        <v-col cols='12' md='1'>
-           <v-btn class="ma-2 toggle" color="dark" @click="expand = !expand">
+           <v-btn class="ma-2 toggle" @click="expand = !expand">
         <v-icon v-if="expand == false"> mdi-arrow-down-thick </v-icon>
         <v-icon v-else> mdi-arrow-up-thick </v-icon>
       </v-btn>
         </v-col>
-        <v-col cols='12' md='1'>
+        <v-col>
 
-      <v-btn class="btn888" @click="submitForm">Show Results</v-btn>
+      <v-btn class="btn-result" @click="submitForm">Results</v-btn>
         </v-col>
-        <v-col cols='12' md='1'>
+        <v-col>
 
-      <v-btn @click="resetHandler" class="resetBtn">Reset</v-btn>
+      <v-btn @click="resetHandler" class="btn-reset">Reset</v-btn>
         </v-col>
       </v-row>
 
@@ -179,40 +194,43 @@
 </template>
 
 
-
-/// vue script
 <script>
-export default {
-  data() {
-    return {
-      expand: false,
-    };
-  },
-};
+  export default {
+    data(){
+      return{
+        items: ["Admin" , "Admin" , "Admin" , "Admin" , "Admin" , "Admin"]
+      }
+    }
+  }
 </script>
 
+<style scoped>
 
-
-
-//// CSS File
-<style lang="scss" scoped>
 .main{
   padding:16px;
   height: 100px !important;
+  background-color: #009688 !important;
+}
+.main .filterSearch{
+  background-color: #FFF !important;
 }
 .mx-autoo {
-  background: rgba(24, 88, 29, 0.342);
+  width: 100% !important;
   padding:16px;
   height: 100px !important;
 }
-.btn888 {
-  margin-left:-15px ;
-}
-.resetBtn{
+.btn-result {
+  background-color:#000 !important;
+  color: #FFF !important;
   margin-left: 25px;
 }
-
-.resetBtn , .btn888{
+.btn-reset{
+  color: #009688 !important;
+}
+.toggle{
+  margin-left:100px !important;
+}
+.btn-reset, .btn-result{
    padding:23px !important;
 }
 
