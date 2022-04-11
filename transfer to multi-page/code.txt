@@ -1,37 +1,38 @@
-///html file
-
 <template>
-  <div>
-    <v-breadcrumbs :items="items">
-      <template v-slot:divider>
-        <v-icon>mdi-chevron-right</v-icon>
-      </template>
-    </v-breadcrumbs>
-  </div>
+  <v-breadcrumbs :items="items">
+    <template v-slot:divider>
+      <v-icon>mdi-chevron-right</v-icon>
+    </template>
+    <template v-slot:item="{ item }">
+      <v-breadcrumbs-item :disabled="item.disabled">
+        <span :style="`color: ${item.color}`">
+          {{ item.text.toUpperCase() }}
+        </span>
+      </v-breadcrumbs-item>
+    </template>
+  </v-breadcrumbs>
 </template>
 
-
-/// vue script
 <script>
-  export default {
-    data: () => ({
-      items: [
-        {
-          text: 'Dashboard',
-          disabled: false,
-          href: 'breadcrumbs_dashboard',
-        },
-        {
-          text: 'Link 1',
-          disabled: false,
-          href: 'breadcrumbs_link_1',
-        },
-        {
-          text: 'Link 2',
-          disabled: true,
-          href: 'breadcrumbs_link_2',
-        },
-      ],
-    }),
-  }
+export default {
+  data: () => ({
+    items: [
+      {
+        text: "Dashboard",
+        disabled: false,
+        color: "teal",
+      },
+      {
+        text: "Link 1",
+        disabled: false,
+        color: "teal",
+      },
+      {
+        text: "Link 2",
+        disabled: true,
+        color: "gray",
+      },
+    ],
+  }),
+};
 </script>
