@@ -109,7 +109,7 @@
   background-color: #FFF;
 }
 .btn-reset{
-  color: #009688 !important;
+  color: gray !important;
 }
 .btn-result{
   background-color: #000 !important;

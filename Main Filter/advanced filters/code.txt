@@ -82,7 +82,7 @@
         </v-col>
         <v-col>
 
-      <v-btn @click="resetHandler" class="btn-reset">Reset</v-btn>
+      <v-btn @click="resetHandler" class="btn-reset">Claer</v-btn>
         </v-col>
       </v-row>
 
@@ -92,7 +92,7 @@
         v-show="expand"
         height="100"
         width="70vw"
-        class="mx-autoo"
+        class="mx-auto"
       >
       <v-row>
         <v-col>
@@ -198,6 +198,7 @@
   export default {
     data(){
       return{
+        expand:false,
         items: ["Admin" , "Admin" , "Admin" , "Admin" , "Admin" , "Admin"]
       }
     }
@@ -214,9 +215,11 @@
 .main .filterSearch{
   background-color: #FFF !important;
 }
-.mx-autoo {
+.mx-auto {
   width: 100% !important;
   padding:16px;
+  margin-top:1px;
+   background:rgba(24, 88, 29, 0.342);
   height: 100px !important;
 }
 .btn-result {
@@ -225,7 +228,7 @@
   margin-left: 25px;
 }
 .btn-reset{
-  color: #009688 !important;
+  color: gray !important;
 }
 .toggle{
   margin-left:100px !important;
