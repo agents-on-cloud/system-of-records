@@ -1,84 +1,77 @@
 <template>
-  <v-card class="card" max-width="600" height="220">
-    <v-row>
-      <v-col md='10'>
-        <h3> Update xxxxxx  </h3>
-        <br>
-        <p>You are about to update<br>
+  <body>
+    <div class="overlay__content">
+      <div class="header-msg">
+         <h3> Update xxxxxx  </h3>
+     <v-icon class='icon'>mdi-checkbox-marked-circle</v-icon>
+      </div>
+      <div class='header-msg'>
+            <p>You are about to update<br>
         (xxxxx name) details,<br>
         Click <span>Update</span> to continue?
         </p>
-         </v-col >
-      <v-col md='2'>
-        <v-icon class='icon'>mdi-checkbox-marked-circle</v-icon>
-         </v-col>
-    </v-row>
-      <v-row>
-      <v-col md='10'>
-         </v-col >
-      <v-col md='2' class='btn-ok'>
-     <div class='btn-option'>
-          <btn class="btn-update"> update</btn>
-        <btn  class="btn-cancel"> cancel</btn>
-     </div>
-         </v-col>
-    </v-row>
-  </v-card>
+        <div>
+          <button class='btn-Update'>Update</button>
+        <button class='btn-cancel'>Cancel</button>
+        </div>
+      </div>
+    </div>
+    <div class="overlay"></div>
+  </body>
 </template>
 
-
 <script>
-  export default {
-
-  }
+export default {};
 </script>
 
 <style scoped>
-
-.card {
-  margin-left: 50px;
-  margin-top: 50px;
-  box-shadow: 0px 10px 24px 5px rgb(0 0 0 / 10%), 0px 3px 4px 1px rgb(0 0 0 / 14%), 14px 30px 35px 20px rgb(0 0 0 / 12%) !important;
-    padding:20px;
-    border-radius: 0;
-}
-.card p{
-  color:  rgb(0 0 0 / 55%)
-}
-.btn-ok{
-  color: #22619E;
-}
-
-.btn-cancel ,.btn-update{
-   margin-top:-15px;
-  cursor: pointer;
-}
-.btn-update{
-  color: #22619E;
-
-}
-.btn-cancel{
-  color: gray;
-}
-.btn-option{
-  display:flex;
+.header-msg {
+  display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-left: -50px;
-  text-transform: uppercase;
+  align-items: center !important;
+}
+p {
+  color: rgb(0 0 0 / 55%);
+}
+.btn-Update {
+  color: #22619e;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right:10px;
   font-weight: bold;
 }
-.btn-option btn{
-  margin-left: -25px;
-}
-.icon{
-  color: green;
-  font-size: 55px;
-  margin-top: 30px;
-  margin-left: -15px;
-}
-.card span{
+  .btn-cancel{
+   color: rgb(0 0 0 / 55%);
+  cursor: pointer;
+  margin-top: 10px;
+  margin-right:10px;
   font-weight: bold;
+  }
+.icon {
+  color:#009688;
+  font-size: 50px;
+  margin-right: 50px;
 }
-
+body {
+  height: 100vh;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(23, 25, 28, 0.7);
+}
+.overlay__content {
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 40%;
+  padding: 2em 1em 1.5em;
+  font-size: 1.2em;
+  border-radius: 0.3em;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3);
+}
 </style>
