@@ -1,0 +1,44 @@
+<template>
+  <v-card
+    class="mx-auto main-card"
+    max-width="344"
+  >
+    <v-card-text>
+      <div>Name</div>
+      <p class="text-h4 text--primary">
+       Title Header
+      </p>
+      <div class="text--primary">
+        Lorem Ipsum is simply dummy text of the printing and.<br>
+        typesetting industry. Lorem Ipsum
+      </div>
+    </v-card-text>
+    <v-card-actions>
+      <v-btn
+        text
+        color="teal"
+      >
+        Learn More
+      </v-btn>
+    </v-card-actions>
+  </v-card>
+</template>
+<script>
+  export default {
+  }
+</script>
+<style scoped>
+:root {
+  --main-transition: 0.3s;
+}
+.main-card{
+  margin-top: 50px;
+  box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
+  border: 1px solid #009688 !important;
+   transition: transform var(--main-transition), box-shadow var(--main-transition) !\;
+}
+.main-card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+}
+</style>
